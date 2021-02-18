@@ -1,0 +1,24 @@
+<?php
+	$date="December 31, 2020";
+	
+	echo $date;
+	
+	
+$ndate= date('Y-m-d', strtotime($date));
+// Outputs 2018-01-01
+
+$now = time(); // or your date as well
+$your_date = strtotime($ndate);
+$datediff = $now - $your_date;
+
+echo round($datediff / (60 * 60 * 24));
+	// Outputs difference
+
+date('jS F', strtotime($ndate))
+
+// Outputs 1st January
+
+date('jS M', strtotime($ndate))
+
+// Outputs 1st Jan
+	?>

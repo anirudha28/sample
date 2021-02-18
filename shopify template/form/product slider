@@ -1,0 +1,23 @@
+   <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+<div id="slider" class="flexslider">
+  <ul class="slides">
+  
+  {% for image in product.images %}
+   <li>
+     <img src="{{ image.src | product_img_url: '2048x' }}" />
+   </li>
+   {% endfor %}
+   
+  
+  </ul>
+</div>
+<div id="carousel" class="flexslider">
+  <ul class="slides">
+    {% for image in product.images %}
+   <li>
+     <img src="{{ image.src | product_img_url: '500x' }}" />
+   </li>
+   {% endfor %}
+  </ul>
+</div>
+    </div>

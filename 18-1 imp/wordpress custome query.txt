@@ -1,0 +1,6 @@
+  global $wpdb;
+									$results = $wpdb->get_results( "SELECT sb_terms.name FROM `sb_term_relationships` inner join sb_term_taxonomy on sb_term_relationships.term_taxonomy_id=sb_term_taxonomy.term_taxonomy_id INNER JOIN sb_terms on sb_terms.term_id=sb_term_taxonomy.term_id WHERE sb_term_relationships.object_id={$event_id} and sb_term_taxonomy.taxonomy='mep_cat'
+
+");
+
+						   $cat_name=$results[0]->name;

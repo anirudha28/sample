@@ -1,0 +1,462 @@
+/**** login page******/
+
+.page-width.login {
+    max-width: 100%;
+    display: -webkit-flex;
+    padding: 0;
+}
+
+.login .width-50 {
+    width: 50%;
+}
+.login_form_div {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+}
+.login_div {
+    max-width: 466px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -87px;
+}
+#LoginHeading, #RecoverHeading {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 33px;
+    margin-bottom: 29px;
+}
+.loginTitle {
+    margin-bottom: 34px;
+}
+a#customer_register_link {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0px 15px;
+    font-family: 'Brown-Regular'; 
+    color: #000;
+}
+#customer_login input {
+    border: 2px solid #e6e2db;
+    padding: 19px 20px;
+    color: #192850;
+    background: transparent;
+}
+.login_div input[type="text"], .login_div input[type="email"],.login_div input[type="password"] {
+    margin-bottom: 9px;
+}
+#RecoverPassword {
+    text-transform: lowercase;
+    text-decoration: underline;
+}
+.login_div input[type="submit"]:hover {
+    background: transparent !important;
+}
+.login_div input[type="submit"] {
+  float: left;  
+    margin-top: 18px;
+    width: 50%;
+}
+
+.login_div .btn{
+border: 2px solid #1c2a52!important;
+background: #262626!important;
+color: #fff!important;
+  -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.login_div .btn:hover {
+    color: #192850!important;
+    background: transparent!important;
+    border: 2px solid #000;
+}
+
+.addressDiv .btn{
+border: 2px solid #1c2a52!important;
+background: #262626!important;
+color: #fff!important;
+  -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.addressDiv .btn:hover {
+    color: #192850!important;
+    background: transparent!important;
+    border: 2px solid #000;
+}
+/****forgot ***/
+div#RecoverPasswordForm input {
+    border: 2px solid #e6e2db;
+    padding: 19px 20px;
+    color: #192850;
+    background: transparent;
+}
+/*** register ***/
+
+.page-width.register {
+    max-width: 100%;
+    display: -webkit-flex;
+    padding: 0;
+}
+.register .width-50 {
+    width: 50%;
+}
+.register_form_div {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+}
+.login_div.register_div {
+    margin-top: -9px;
+}
+#RegisterForm input {
+    border: 2px solid #e6e2db;
+    padding: 19px 20px;
+    color: #192850;
+    background: transparent;
+}
+
+.half {
+    float: left;
+    width: 50%;
+}
+input#RegisterForm-FirstName {
+    border-right: none;
+    background: url(register-border1.png) right no-repeat;
+}
+.half.last-child input {
+    border-left: none !important;
+}
+#customer_login_link {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0px 15px;
+    font-family: 'Brown-Regular';
+    color:#000;
+}
+
+.register_div input[type="submit"] {
+    margin-top: 21px;
+    margin-bottom: 30px;
+}
+.sign_up_div{
+    display: block;
+    width: 100%;
+    float: left;
+}
+a#customer_terms_link {
+    text-decoration: underline;
+}
+.terms p {
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+
+.form-message--error {
+    color: #000;
+    border: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    background: none;
+  margin: 0 0 20px;
+}
+.form-message--error li {
+    color: #000;
+    list-style: none;
+}
+.form-message--error .form-message__title {
+    display: none;
+}
+
+/*** account page ***/
+.account-page {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    background: #f8f5f1;
+}
+.account-page .sidebar {
+    width: 27%;
+}
+.sidebar {
+    margin-top: 0;
+}
+.sidebar-fix {
+    position: sticky;
+    float: left;
+    position: -webkit-sticky;
+}
+.side-menu {
+    padding: 80px 0 80px 120px;
+}
+.side-menu li {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.side-menu li.active a {
+    border-bottom: 2px solid #000;
+}
+.side-menu li a {
+    font-family: 'Brown-Regular';
+    text-decoration: none;
+    color: #000;
+    padding: 3px 0;
+    margin: 4px 0;
+    float: left;
+    font-size: 13px;
+}
+.side-menu li a:hover{
+  color: #000;
+}
+.side-menu h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.side-menu .welcome{
+  padding-bottom: 19px;
+  border-bottom: 2px solid #ebe7e1;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.side-menu .sign_out{
+  padding-top: 24px;
+  margin-top: 18px;
+  float: left;
+  border-top: 2px solid #ebe7e1;
+  width: 100%;
+}
+.side-menu ul{
+  float: left;
+}
+#customer_logout_link {
+  font-family: 'Brown-Regular'; 
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#000;
+  font-size: 13px;
+}
+
+
+.page {
+    width: 73%;
+    margin: 0 0;
+    padding: 87px 0 110px;
+    float: right;
+}
+.addressDiv .w_825 {
+    max-width: 825px;
+    margin:0 auto;
+}
+
+.addressTitle h1 {
+    font-size:20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.addressTitle {
+    position: relative;
+    display: -webkit-flex;
+    border-bottom: 2px solid #ebe7e1;
+      padding-bottom: 40px;
+
+}
+.addressTitle button {
+    border: none;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    
+    letter-spacing: 2px;
+  font-family: 'Brown-Regular';
+}
+.new_link {
+    position: absolute;
+    border: none;
+    padding: 0 0 0;
+    right: 0;
+    top: 10px;
+}
+#AddressNewForm h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#AddressNewForm .grid_item.one-half {
+    float: left;
+    padding-left: 0px;
+}
+
+.addressDiv  input, select{
+    border: 2px solid #e6e2db;
+    padding: 19px 20px;
+    color: #192850;
+    background: transparent;
+}
+.address_form form h4.h2 {
+   
+}
+input#AddressFirstNameNew {
+    border-right: none !important;
+    background: url(register-border1.png) right no-repeat !important;
+}
+#AddressLastNameNew {
+    border-left: none !important;
+}
+input#AddressCityNew {
+    border-right: none !important;
+    background: url(register-border1.png) right no-repeat !important;
+}
+#AddressCountryNew {
+    border-left: none !important;
+}
+.addressDiv select:focus {
+    border: 2px solid #e6e2db;
+    background: transparent;
+}
+.addressDiv select:focus {
+    border: 2px solid #e6e2db;
+    background: transparent;
+}
+.addressDiv input:-webkit-autofill,
+.addressDiv input:-webkit-autofill:hover, 
+.addressDiv input:-webkit-autofill:focus, 
+.addressDiv input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 35px #f8f5f1 inset !important;
+}
+.addressDiv select:-webkit-autofill,
+.addressDiv select:-webkit-autofill:hover, 
+.addressDiv select:-webkit-autofill:focus, 
+.addressDiv select:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 35px #f8f5f1 inset !important;
+}
+.form-vertical [type="submit"] {
+    width: 100%;
+}
+.add_book ul {
+    margin: 0 -30px;
+}
+.add_book ul li:nth-child(3n+1) {
+    clear: both;
+}
+.page.addressDiv ul>li {
+    /* display: flex; */
+    float: left;
+}
+.add_book li {
+    float: left;
+    width: 33.333%;
+    padding: 0 30px 20px;
+}
+.addressDiv .address {
+    margin-right: 0;
+    float: left;
+}
+.addressDiv .address p {
+    line-height: 34px;
+    margin-top: 16px;
+    font-size: 13px;
+}
+.address_actions {
+    float: left;
+    width: 100%;
+    padding: 28px 0 0;
+}
+.address_actions button {
+    float: left;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #101820;
+    font-size: 13px;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    line-height: normal;
+}
+.addressDiv .first_name{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-family: 'Brown-Regular';
+}
+.redline {
+    float: left;
+    padding: 0px 14px;
+    line-height: 10px;
+    font-size: 16px;
+    height: 14px;
+    overflow: hidden;
+}
+
+/***account***/
+.accountDiv .w_825 {
+    max-width: 825px;
+    margin: 0 auto;
+}
+
+.account_itle {
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 11px;
+}
+.myaccount th {
+    text-align: left;
+    border: none;
+    padding: 5px 0px 21px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Brown-Regular';
+    border-bottom: 2px solid #ebe7e1;
+}
+.myaccount td {
+    text-align: left;
+    border: none;
+    padding: 22px 0px;
+    font-size: 14px;
+    padding-bottom:0px;
+}
+
+.myaccount .myaccount__order-history td a {
+    border-bottom: none;
+}
+
+/**** single order page*********/
+.order_page_mail {
+    float: left;
+    width: 100%;
+    clear: both;
+    padding: 30px 0;
+    background: #f8f5f1;
+}
+.myaccount .order-table td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.myaccount .order-table th {
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px;
+}
+.order-table a {
+    border-bottom: 1px solid currentColor;
+    font-size: 15px;
+}

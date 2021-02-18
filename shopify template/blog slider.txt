@@ -1,0 +1,82 @@
+<div id="pro_blog">
+ <div class="problog_header">
+  <h3 class="heading_h3">
+    <span>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod.</span>
+    <span>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod.</span>
+    <span>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod.</span>
+       </h3>
+ </div>
+  
+ <div class="problog_row"> 
+   <div class="problog_slider">
+   {% for article in blogs.blog.articles %}
+     <div>
+       <div class="problog_img">
+         <a href="{{ article.url }}" class="article__link">
+            {% if article.image %}
+              {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+              {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+              {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+              {% include 'image-style', image: article.image, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+              <div id="" class="article_grid-image-wrapper js">
+                <div class="article__grid-image-container blogimg">
+                  <img id=""
+                      class="article_grid-image lazyload"
+                      data-src="{{ img_url }}"
+                      data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                      data-aspectratio="{{ article.image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="">
+                </div>
+              </div>
+              <noscript>
+                <div class="article__grid-image-wrapper">
+                  {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+                </div>
+              </noscript>
+            {% endif %}
+           
+           <h3 class="heading">{{ article.title | escape }}</h3>
+           
+         </a>
+       </div>
+     </div>
+   {% endfor %}  
+   </div>
+ </div>
+  <div class="probtn_div">
+     <a class="btn" href="#">See More</a> 
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+   $('.problog_slider').slick({
+  centerMode: true,
+      infinite: true,
+  centerPadding: '48px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+  });
+</script>

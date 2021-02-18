@@ -1,0 +1,82 @@
+{
+    "name": "Login Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "login_image",
+        "label": {
+          "da": "Billede",
+          "de": "Foto",
+          "en": "Image",
+          "es": "Imagen",
+          "fi": "Kuva",
+          "fr": "Image",
+          "hi": "इमेज",
+          "it": "Immagine",
+          "ja": "画像",
+          "ko": "이미지",
+          "nb": "Bilde",
+          "nl": "Afbeelding",
+          "pt-BR": "Imagem",
+          "pt-PT": "Imagem",
+          "sv": "Bild",
+          "th": "รูปภาพ",
+          "zh-CN": "图片",
+          "zh-TW": "圖片"
+        },
+        "info": "Size 700 x 830px"
+      },
+      {
+        "type": "color",
+        "id": "login_form_bkg",
+        "label": "Select color",
+        "default": "#f8f5f1",
+        "info": "Form Background Color"
+      }
+    ]
+  },
+  {
+    "name": "Register Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "reg_image",
+        "label": {
+          "da": "Billede",
+          "de": "Foto",
+          "en": "Image",
+          "es": "Imagen",
+          "fi": "Kuva",
+          "fr": "Image",
+          "hi": "इमेज",
+          "it": "Immagine",
+          "ja": "画像",
+          "ko": "이미지",
+          "nb": "Bilde",
+          "nl": "Afbeelding",
+          "pt-BR": "Imagem",
+          "pt-PT": "Imagem",
+          "sv": "Bild",
+          "th": "รูปภาพ",
+          "zh-CN": "图片",
+          "zh-TW": "圖片"
+        },
+        "info": "Size 700 x 830px"
+      },
+      {
+        "type": "color",
+        "id": "reg_form_bkg",
+        "label": "Select color",
+        "default": "#f8f5f1",
+        "info": "Form Background Color"
+      }
+    ]
+  }

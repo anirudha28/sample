@@ -1,0 +1,336 @@
+ {% if section.settings.show_inhomebanner != blank %}
+<div class="story_header" id="inhome_header">
+   <img id=""
+        class="feature-row__image lazyload desktop--show"
+        src="{{ section.settings.inhome_img | img_url: '2000x2000' }}"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ section.settings.inhome_img.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ section.settings.inhome_img.alt | escape }}">
+   
+   
+   <img id=""
+        class="feature-row__image lazyload mobile--show"
+        src="{{ section.settings.moinhome_img | img_url: '800x800' }}"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ section.settings.moinhome_img.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ section.settings.moinhome_img.alt | escape }}" style="display:none;">
+   
+   <div class="story_caption">
+     <div class="page-width p-0">
+   		 <div class="story_wrap story_{{ section.settings.inhome_position }}">
+           {% if section.settings.inhome_text != blank %}
+           <h1 style="color:{{ section.settings.inhome_textcolor }};">{{ section.settings.inhome_text }}</h1>
+           {% endif %}           
+       </div>
+     </div>
+   </div>
+   
+</div> 
+{% endif %}   
+
+
+<div class="inhome_images interiors-section">
+  <div class="page-width p-0"> 
+    
+    
+ {% for block in section.blocks %}
+{% case block.type %}
+    
+	{% when 'block-1' %}
+	<div class="image_box full_imgbox interiors-section {% if forloop.first %}active{% endif %}">
+    <a href="{{ block.settings.full_img_link }}">
+    <img id=""
+        class="feature-row__image lazyload "
+        src="{{ block.settings.full_img | img_url: '1200x1200' }}"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ block.settings.full_img.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ block.settings.full_img.alt | escape }}">
+    </a>
+  </div>
+
+    
+    {% when 'block-2' %}
+	<div class="image_box aling_{{ block.settings.img_position }} interiors-section">
+    
+    
+    <div class="image_2and3">   
+      <div class="smallbox">
+        <a href="{{ block.settings.half_img_1_link }}">
+    <img id=""
+        class="feature-row__image lazyload"
+        src="{{ block.settings.half_img_2 | img_url: '500x500' }}"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ block.settings.half_img_2.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ block.settings.half_img_2.alt | escape }}">
+        </a>
+      </div>
+      
+    <div class="smallbox m-0 bottom--img">
+      <a href="{{ block.settings.half_img_2_link }}">
+    <img id=""
+        class="feature-row__image lazyload"
+        src="{{ block.settings.half_img_3 | img_url: '500x5000' }}"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ block.settings.half_img_3.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ block.settings.half_img_3.alt | escape }}">
+      </a>
+      </div>
+      
+      
+  </div>
+    <div class="image_1">   
+      <a href="{{ block.settings.half_img_3_link }}">
+    <img id=""
+        class="feature-row__image lazyload"
+        src="{{ block.settings.half_img_1 | img_url: '800x800' }}"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ block.settings.half_img_1.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ block.settings.half_img_1.alt | escape }}">
+      </a>
+  </div>
+  </div>
+    
+    
+    {% when 'block-0' %}
+	<div class="inhome_info interiors-section">
+<div class="page-width p-0"> 
+  <div class="inhome_box {{ block.settings.meet_alignment_s }}_div">
+    <h3>{{ block.settings.title }}</h3>
+    {{ block.settings.text_info }}
+  </div>  
+</div>
+</div>
+    
+
+ {% endcase %}
+{% endfor %}   
+    
+    
+    
+    
+    
+
+</div>
+</div>
+
+<script>
+
+  $(window).on('load resize', function () {
+    var boxsheight = $(".image_1").height();
+    //alert(boxheight);
+    $(".image_2and3").css("height", boxsheight);
+});
+
+</script>
+
+{% schema %}
+  {
+    "name": "In Homes",
+    "settings": [
+	 {
+        "type": "header",
+        "content": "Banner"
+     },
+	{
+        "type": "checkbox",
+        "id": "show_inhomebanner",
+        "label": "Show?"
+    },
+  {
+        "type": "image_picker",
+        "id": "inhome_img",
+        "label": "Upload image",
+		"info" : "Size: 2000 x 864"
+      },
+     {
+        "type": "image_picker",
+        "id": "moinhome_img",
+        "label": "Upload mobile image",
+		"info" : "Size: 800 x 864"
+      },	
+	 {
+        "type": "textarea",
+        "id": "inhome_text",
+        "label": "info"
+      },
+	 {
+        "type": "color",
+        "id": "inhome_textcolor",
+        "label": "Text color"
+      },
+{
+          "type": "select",
+          "id": "inhome_position",
+          "label": "Text alignment",
+          "options": [
+            {
+              "value": "middleLeft",
+              "label": "Left"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Center"
+            },
+            {
+              "value": "middleRight",
+              "label": "Right"
+            }
+          ],
+          "default": "middleCenter"
+        }
+],
+"blocks":[
+       {
+        "type": "block-0",
+        "name": "Short Description",
+        "settings": [
+		  	
+         {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, 
+		 {
+            "type": "richtext",
+            "id": "text_info",
+            "label": "Description"
+          },
+		  {
+          "type": "select",
+          "id": "meet_alignment_s",
+          "label": "Alignment",
+          "default": "left",
+          "options": [
+
+            {
+              "label":"Left",
+              "value": "left"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }            
+          ]
+        }	
+
+        ]
+      }, 
+	   {
+        "type": "block-1",
+        "name": "Full image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "full_img",
+            "label": "Upload image",
+            "info" : "Size: 1200 x 670px"
+          },
+		 {
+            "type": "text",
+            "id": "full_img_link",
+            "label": "Link"
+          }
+        ]
+      },
+      {
+        "type": "block-2",
+        "name": "Three images",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "half_img_1",
+            "label": "Large image",
+            "info" : "Size: 800 x 703px"
+          },
+           {
+            "type": "text",
+            "id": "half_img_1_link",
+            "label": "Link"
+          },
+		 {
+            "type": "image_picker",
+            "id": "half_img_2",
+            "label": "Small image 1",
+            "info" : "Size: 500 x 476px"
+          },
+{
+            "type": "text",
+            "id": "half_img_2_link",
+            "label": "Link"
+          },
+         {
+            "type": "image_picker",
+            "id": "half_img_3",
+            "label": "Small image 2",
+            "info" : "Size: 500 x 476px"
+          },
+{
+            "type": "text",
+            "id": "half_img_3_link",
+            "label": "Link"
+          },
+		{
+          "type": "select",
+          "id": "img_position",
+          "label": "Large image alignment",
+          "options": [
+            {
+              "value": "middleLeft",
+              "label": "Left"
+            },
+            {
+              "value": "middleRight",
+              "label": "Right"
+            }
+          ],
+          "default": "middleRight"
+        }
+			
+        ]
+      },
+	  {
+        "type": "block-3",
+        "name": "Two images",
+        "settings": [
+         
+		 {
+            "type": "image_picker",
+            "id": "half_img_one",
+            "label": "Half image 1",
+            "info" : "Size: 600 x 670px"
+          },
+          {
+            "type": "text",
+            "id": "half_img_one_link",
+            "label": "Link"
+          },
+         {
+            "type": "image_picker",
+            "id": "half_img_two",
+            "label": "Half image 2",
+            "info" : "Size: 600 x 670px"
+          },
+          {
+            "type": "text",
+            "id": "half_img_two_link",
+            "label": "Link"
+          }
+			
+        ]
+      }
+    ]
+  }
+{% endschema %}
+

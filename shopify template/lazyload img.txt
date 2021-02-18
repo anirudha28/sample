@@ -1,0 +1,50 @@
+ {{ 'product.css' | asset_url | stylesheet_tag }}
+
+<div class="no_nasties_div">
+  <div class="page-width">
+    <div class="w-50">
+      <div class="content-box">
+        {% if product.metafields.first_title.first_title %}
+           <h1 class="heading" style="color:{{product.metafields.first_title_color.first_title_color}};"> {{ product.metafields.first_title.first_title }}  </h1>
+        {% endif %}
+        {% if product.metafields.second_title.second_title %}
+        <h2 class="heading" style="color:{{product.metafields.second_title_color.second_title_color}};">{{product.metafields.second_title.second_title}}</h2>
+        {% endif %}
+        <div class="content">
+            {% if product.metafields.description_1.description_1 %}
+             <p>{{product.metafields.description_1.description_1}}</p>
+            {% endif %}
+        </div>
+            
+        <ul class="info-bullet">
+          {% if product.metafields.info_bullets.info_bullets %}
+          {% for value in product.metafields.info_bullets.info_bullets %} 
+            <li>{{ value }}</li>
+          {% endfor %} 
+          {% endif %}
+        </ul>
+      </div>	   
+    </div>
+    <div class="w-50 img-div">
+       {% if product.metafields.image_no.image_no %}
+      
+        <img id="" class="lazyload chocolate-img"
+                   data-src="{{ product.metafields.image_no.image_no }}"
+                   data-widths="[180, 360, 540, 700, 900, 1080, 1296, 1512, 1728, 2048]"
+                   data-aspectratio="{{ section.settings.b_image.aspect_ratio }}"
+                   data-sizes="auto"
+                   > 
+       {% endif %}
+    </div>
+  </div>
+   <div class="jopill_img_product">
+    {% include 'icon-jopill' %}
+    </div>
+</div>
+<style>
+  
+  .no_nasties_div{
+  /*background: linear-gradient(325deg, #98d2f3 0%, #d2ebfa 28%, #fff 80%);*/
+    background: linear-gradient(325deg, {{product.metafields.bk_gr_clr1.background_gradient_color_1}} 0%, {{product.metafields.bk_gr_clr2.background_gradient_color_2}} 28%, {{product.metafields.bk_gr_clr3.background_gradient_color_3}} 80%);
+  }
+</style>
